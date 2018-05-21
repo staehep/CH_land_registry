@@ -1,0 +1,108 @@
+html, body {
+    height:100%;
+}
+
+body {
+    background-color: white;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+section {
+    min-height: 100vh;
+    text-align: center;
+    padding: 200px 0;
+}
+
+.button-row {
+    margin: 0 -10px 20px;
+}
+
+.button-row li {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    .button-row li {
+        width: 25%;
+    }
+}
+
+.button-row a {
+    display: block;
+    padding: 75px 0;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #ddd;
+    color: #000;
+    border-radius: 5px;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-row a:hover {
+    background: #fff;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 60px;
+    text-shadow: 0 0 2px #000;
+    margin-bottom: 30px;
+}
+
+form {
+    box-align: center;
+}
+
+.form-group label {
+    padding: 5px 10px;
+    width: 10%;
+    text-align: right;
+}
+
+.form-group input[type=text] {
+    border: 1px solid #fff;
+    padding: 5px;
+    width: 80%;
+    outline: none;
+    color: #000;
+}
+
+.form-row {
+    overflow: hidden;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form br {
+    clear: both;
+}
+
+.btn-primary {
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
