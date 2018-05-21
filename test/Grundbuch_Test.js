@@ -19,7 +19,7 @@ contract('Grundbuch', function(accounts) {
   var privateDataHash2 = "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08";
   
 
-  // Case: check initial values
+  // Case 1: check initial values
   it("should be initialized with empty values", function() {
     return Grundbuch.deployed().then(function(instance) {
       return instance.getNumberOfLandRegistered();
@@ -28,7 +28,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
 
-  // Case 1: Register first land title
+  // Case 2: Register first land title
   it("should let us register first land title", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -67,7 +67,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
   
-   // Case 2: Register second land title
+  // Case 3: Register second land title
   it("should let us register second land title", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -105,6 +105,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
 
+  // Case 4: Return land with valid EGRID
   it("should return land if egrid is valid", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -117,6 +118,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
 
+  // Case 5: Return full land information with valid secret
   it("should return full land information if secret is valid", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -131,6 +133,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
 
+  // Case 6: With invalid secret no information is returned
   it("should not return full land information if secret is invalid", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -140,6 +143,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
 
+  // Case 7: No data is returned with invalid egrid
   it("should not return valid data if egrid is not found", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -151,7 +155,8 @@ contract('Grundbuch', function(accounts) {
       assert.equal(data[3], "", "owner name must be empty");
     });
   });
-
+  
+  // Case 8: Land which is registered cannot be registered a second time
   it("should not register land if egrid is already in use", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -162,6 +167,7 @@ contract('Grundbuch', function(accounts) {
       });
   })
 
+  // Case 9: Update a land
   it("should update the land", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
@@ -195,6 +201,7 @@ contract('Grundbuch', function(accounts) {
     });
   });
 
+  // Case 10: The land registry has to match if a land gets updated
   it("should not update the land if the land registry doesnt match", function() {
     return Grundbuch.deployed().then(function(instance) {
       landTitleInstance = instance;
