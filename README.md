@@ -7,7 +7,6 @@ Follow the steps below to download, install, and run this project.
 - NPM: https://nodejs.org
 - Truffle: https://github.com/trufflesuite/truffle
 - Ganache: http://truffleframework.com/ganache/
-- Metamask: https://metamask.io/
 
 ## Step 1. Clone the project
 `git clone https://github.com/staehep/CH_land_registry.git`
