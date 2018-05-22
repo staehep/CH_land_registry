@@ -23,11 +23,6 @@ Open the Ganache GUI client that you downloaded and installed. This will start y
 `$ truffle migrate --reset`
 You must migrate the Grundbuch smart contract each time your restart ganache.
 
-## Step 5. Configure Metamask
-- Unlock Metamask
-- Connect metamask to your local Etherum blockchain provided by Ganache.
-- Import an account provided by ganache.
-
-## Step 6. Run the Front End Application
+## Step 5. Run the Front End Application
 `$ npm run dev`
 Visit this URL in your browser: http://localhost:3000
